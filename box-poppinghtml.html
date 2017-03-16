@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+   <link href="box-poppingcss.css" type="text/css" rel="stylesheet"/>
+   </head>
+     
+	 <body>
+	 
+	 <!-- Meet Tyler -->
+	  <div id="meetTylerOuterBox">
+	   <img src="skateboardbackground.jpg" class="meetTylerBackgroundImage" alt=""/>
+	   <div id="meetTylerBox">
+		
+		  <img src="tylersittinglake.jpg" class="meetTylerAvatar" alt="Avatar" />
+		  
+		  <p id="contactTylerText"> Tyler Sutton </p>
+		  <button id="bioTylerButton" onclick> Bio </button>
+		  <button id="contactTylerButton" onclick> Contact</button>
+		
+	   </div>
+	  </div>
+	<!-- End of Meet Tyler -->
+	 
+	 <script>
+	 // Make Contact button move when screen goes past certain point //
+		
+		function testScroll(){
+			if(window.pageYOffset>50) {
+			document.getElementById("meetTylerBox").style.width = "400px";
+			} else {
+			document.getElementById("meetTylerBox").style.width = "0px";
+		}
+		
+			if(window.pageYOffset>50) {
+			document.getElementById("contactTylerButton").style.transform = "rotate(0deg)";
+			document.getElementById("contactTylerButton").style.width = "100px";
+			document.getElementById("contactTylerButton").style.opacity = "1";
+			
+			document.getElementById("bioTylerButton").style.transform = "rotate(0deg)";
+			document.getElementById("bioTylerButton").style.width = "360px";
+			document.getElementById("bioTylerButton").style.opacity = "1";
+			
+			} else {
+			document.getElementById("contactTylerButton").style.transform = "rotate(-90deg)";
+			document.getElementById("contactTylerButton").style.width = "20px";
+			document.getElementById("contactTylerButton").style.opacity = "0";
+			
+			document.getElementById("bioTylerButton").style.transform = "rotate(-90deg)";
+			document.getElementById("bioTylerButton").style.width = "20px";
+			document.getElementById("bioTylerButton").style.opacity = "0";
+		}
+		}
+		window.onscroll=testScroll
+	 </script>
+	 
+	 </body>
+  </html>
